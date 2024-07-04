@@ -1,0 +1,82 @@
+{
+  "name": "cubo-components",
+  "version": "0.0.21",
+  "private": false,
+  "description": "A react component library for Cubo Tecnologia BR",
+  "license": "ISC",
+  "author": {
+    "name": "Kaio Marques",
+    "email": "alexandremarqueskaio@gmail.com"
+  },
+  "type": "module",
+  "repository": {
+    "url": "https://github.com/cubo-tecnologia/cubo-components.git",
+    "type": "git",
+    "directory": "packages/core"
+  },
+  "main": "dist/index.cjs",
+  "module": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "sideEffects": false,
+  "files": [
+    "dist/**",
+    "README.md"
+  ],
+  "scripts": {
+    "prebuild": "rm -rf dist",
+    "build": "rollup -c rollup.config.mjs",
+    "dev": "npm run build --watch",
+    "lint": "eslint \"src/**/*.ts*\"",
+    "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf dist",
+    "test": "vitest run"
+  },
+  "keywords": [],
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^24.1.0",
+    "@rollup/plugin-node-resolve": "^15.2.3",
+    "@rollup/plugin-terser": "^0.4.4",
+    "@rollup/plugin-typescript": "^11.1.6",
+    "@testing-library/jest-dom": "^6.4.6",
+    "@testing-library/react": "^16.0.0",
+    "@testing-library/user-event": "^14.5.2",
+    "@types/jest-axe": "^3.5.9",
+    "@types/react": "^18.3.3",
+    "@types/react-dom": "^18.3.0",
+    "eslint": "^8.57.0",
+    "eslint-config-next": "^13.5.6",
+    "eslint-config-prettier": "^8.10.0",
+    "eslint-config-turbo": "^1.13.4",
+    "eslint-plugin-react": "^7.29.4",
+    "jest-axe": "^9.0.0",
+    "jest-environment-jsdom": "^29.7.0",
+    "prettier": "^2.8.8",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "rollup": "^3.29.4",
+    "rollup-plugin-copy": "^3.5.0",
+    "rollup-plugin-peer-deps-external": "^2.2.4",
+    "rollup-plugin-preserve-directives": "^0.2.0",
+    "rollup-plugin-typescript-paths": "^1.5.0",
+    "tsc-alias": "^1.8.10",
+    "tslib": "^2.6.3",
+    "typescript": "^4.9.5",
+    "vite-tsconfig-paths": "^4.3.2",
+    "vitest": "^1.6.0"
+  },
+  "peerDependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "dependencies": {
+    "@radix-ui/react-checkbox": "^1.1.0",
+    "@radix-ui/react-select": "^2.1.1",
+    "@radix-ui/react-switch": "^1.1.0",
+    "class-variance-authority": "^0.7.0",
+    "react-icons": "^5.2.1",
+    "react-number-format": "^5.4.0",
+    "tailwind-merge": "^2.3.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

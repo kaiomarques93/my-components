@@ -1,0 +1,30 @@
+name: Build and Publish
+
+on:
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Build Storybook
+        run: npm run build-storybook
+
+      - name: Build Nextjs
+        run: npm run build
+
+      - name: Install cubo-components dependencies
+        working-directory: packages/core
+        run: npm install
+
+      - name: Run tests
+        working-directory: packages/core
+        run: npm run test

@@ -1,0 +1,126 @@
+import type { Config } from 'tailwindcss'
+
+const config = {
+  darkMode: ['class'],
+  content: [
+    './pages/**/*.{ts,tsx}',
+    './components/**/*.{ts,tsx}',
+    './app/**/*.{ts,tsx}',
+    './src/**/*.{ts,tsx}',
+    './packages/**/*.{ts,tsx}',
+  ],
+  prefix: '',
+  theme: {
+    container: {
+      center: true,
+      padding: '2rem',
+      screens: {
+        '2xl': '1400px',
+      },
+    },
+    extend: {
+      colors: {
+        'button-inactive': '#C6C6C6',
+        'button-text-inactive': '#8D8D8D',
+        'button-loading': '#DFDFDF',
+        'background-lines': '#D4D4D4',
+        'background-gray': '#F2F2F2',
+        'background-branco': '#FFFFFF',
+        'background-light': '#EEEEEE',
+        hover: '#EAEAEA',
+        'primary-blue': '#0372FF',
+        'primary-blue-hover': '#07369A',
+        'primary-blue-action': '#032161',
+        danger: '#DC2626',
+        'danger-hover': '#B91C1C',
+        'danger-action': '#991B1B',
+        'danger-opacity': '#FFF3F3',
+        'text-primary': '#0A0A0A',
+        'text-description': '#737373',
+        'text-link': '#0091EA',
+        'text-badge-waiting': '#775C16',
+        'text-badge-answered': '#1F425C',
+        'text-badge-started': '#1C9C67',
+        'badge-answered': '#D8EEFF',
+        'badge-started': '#D0FDEA',
+        'badge-waiting': '#FFF3D2',
+        'badge-done': '#1C9C67',
+        'badge-canceled': '#DC2626',
+        'icon-primary': '#0A0A0A',
+        'field-color': '#EDEDED',
+        'field-text': '#0A0A0A',
+        'field-description': '#737373',
+        'tag-text': '#FFFFFF',
+        'tag-1': '#5B7282',
+        'tag-2': '#186ADE',
+        'tag-3': '#D91F11',
+        'tag-4': '#F5C518',
+        'tag-5': '#E86427',
+        'tag-6': '#167B7D',
+        'tag-7': '#0073BA',
+        'tag-8': '#535FE8',
+        'tag-9': '#8F49DE',
+        'tag-10': '#CC1D91',
+        'tag-11': '#775C16',
+        'medium-blue': '#BAE1FF',
+        'hard-blue': '#A8D1F1',
+        'light-blue': '#E9F6FF',
+        border: 'hsl(var(--border))',
+        input: 'hsl(var(--input))',
+        ring: 'hsl(var(--ring))',
+        background: 'hsl(var(--background))',
+        foreground: 'hsl(var(--foreground))',
+        primary: {
+          DEFAULT: 'hsl(var(--primary))',
+          foreground: 'hsl(var(--primary-foreground))',
+        },
+        secondary: {
+          DEFAULT: 'hsl(var(--secondary))',
+          foreground: 'hsl(var(--secondary-foreground))',
+        },
+        destructive: {
+          DEFAULT: 'hsl(var(--destructive))',
+          foreground: 'hsl(var(--destructive-foreground))',
+        },
+        muted: {
+          DEFAULT: 'hsl(var(--muted))',
+          foreground: 'hsl(var(--muted-foreground))',
+        },
+        accent: {
+          DEFAULT: 'hsl(var(--accent))',
+          foreground: 'hsl(var(--accent-foreground))',
+        },
+        popover: {
+          DEFAULT: 'hsl(var(--popover))',
+          foreground: 'hsl(var(--popover-foreground))',
+        },
+        card: {
+          DEFAULT: 'hsl(var(--card))',
+          foreground: 'hsl(var(--card-foreground))',
+        },
+      },
+      borderRadius: {
+        lg: 'var(--radius)',
+        md: 'calc(var(--radius) - 2px)',
+        sm: 'calc(var(--radius) - 4px)',
+      },
+      keyframes: {
+        'accordion-down': {
+          from: { height: '0' },
+          to: { height: 'var(--radix-accordion-content-height)' },
+        },
+        'accordion-up': {
+          from: { height: 'var(--radix-accordion-content-height)' },
+          to: { height: '0' },
+        },
+      },
+      animation: {
+        'accordion-down': 'accordion-down 0.2s ease-out',
+        'accordion-up': 'accordion-up 0.2s ease-out',
+      },
+    },
+  },
+  plugins: [require('tailwindcss-animate')],
+} satisfies Config
+
+export default config

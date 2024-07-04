@@ -1,0 +1,9 @@
+# Exclude everything
+*
+
+# Except for the components folder
+!/src/components
+
+# And the necessary files to run the package
+!package.json
+!README.md
